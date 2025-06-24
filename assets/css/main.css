@@ -1,0 +1,75 @@
+/* header */
+/* 固定導航欄 */
+.fixed-navbar {
+    position: fixed; /* 固定在頂部 */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.85); /* 降低透明度 */
+    backdrop-filter: blur(15px); /* 增強毛玻璃效果 */
+    box-shadow: 0 2px 20px rgba(0,0,0,0.15); /* 增強陰影 */
+    padding: 0.8rem 0; /* 縮小導航欄高度 */
+    z-index: 1000; /* 確保在最上層 */
+    transition: all 0.3s ease; /* 動畫過渡 */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 左側品牌區域 */
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-icon {
+    width: 40px; /* 強制設定 Logo 大小 */
+    height: 40px;
+    object-fit: contain; /* 保持比例 */
+    border-radius: 8px; /* 輕微圓角 */
+}
+
+.site-title {
+    font-size: 1.5rem;
+    color: #667eea;
+    margin: 0;
+    font-weight: bold;
+}
+
+/* 右側導航選單 */
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    background-color: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background-color: #667eea;
+    color: white;
+}
+/* header */
