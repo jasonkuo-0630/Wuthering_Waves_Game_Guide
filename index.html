@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <!-- 網頁基本資訊 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鳴潮攻略站-首頁</title>
+    
+    <!-- 引入網站圖示 -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- 引入 CSS 樣式檔案 -->
+    <link rel="stylesheet" href="assets/css/main.css">        <!-- 全站共用樣式 -->
+    <link rel="stylesheet" href="assets/css/home.css">        <!-- 首頁專用樣式 -->
+</head>
+
+<body class="home-page"> 
+
+    <!-- 靜態導航欄 -->
+    <header class="fixed-navbar">
+        <div class="nav-container">
+            <!-- 左側：Logo 和網站標題 -->
+            <div class="nav-brand">
+                <img src="assets/images/icons/logo.png" alt="鳴潮Logo" class="logo-icon">
+                <h1 class="site-title">鳴潮攻略站</h1>
+            </div>
+            
+            <!-- 右側：導航選單 -->
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-link">首頁</a></li>
+                <li><a href="pages/characters/index.html" class="nav-link">共鳴者</a></li>
+                <li><a href="pages/weapons/index.html" class="nav-link">武器</a></li>
+                <li><a href="pages/echoes/index.html" class="nav-link">聲骸</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- 滾動容器 - 控制整頁滾動和 snap 效果 -->
+    <div class="scroll-container">
+        <div class="home-page-set">
+            <!-- 首頁-第一頁 -->
+            <section class="home-page-select">
+                <!-- 主頁內容 -->
+                <div class="home-select">
+                    <!-- 用 wuthering-waves-logo 代替標題 -->
+                    <div class="wuthering-waves-logo">
+                        <img src="assets/images/icons/wuthering-waves-logo.png" alt="鳴潮攻略站" class="main-logo">
+                    </div>
+                    
+                    <!-- 搜尋框 -->
+                    <div class="search-container">
+                        <input type="text" id="searchInput" class="search-box" placeholder="搜尋共鳴者、武器、聲骸...">
+                    </div>
+                </div>
+
+                <!-- 右方側邊提示 -->
+                <div class="scroll-hint-side" id="scrollHint">
+                    <div class="scroll-text">探索更多</div>
+                    <div class="scroll-arrow">↓</div>
+                </div>
+            </section>
+
+            <!-- 首頁-第二頁 -->
+            <section class="home-page-guide">
+                <div class="home-page-guide-title">
+                    <h2>遊戲圖鑑</h2>
+                    <p class="subheading">選擇你想查看的內容</p>
+                </div>
+                <!-- 各圖鑑連結入口卡片區域 -->
+                <div class="guide-card-grid">
+
+                    <!-- 共鳴者圖鑑卡片 -->
+                    <a href="pages/characters/index.html" class="guide-card">
+                        <div class="guide-card-bg" style="background-image: url('assets/images/home/characters-card-bg.jpg');"></div>
+                        <div class="guide-card-content">
+                            <div class="guide-card-title">共鳴者</div>
+                            <p class="guide-card-subtitle">查看所有角色資訊、技能和建議配置</p>
+                        </div>
+                    </a>
+
+                    <!-- 武器圖鑑卡片 -->
+                    <a href="pages/weapons/index.html" class="guide-card">
+                        <div class="guide-card-bg" style="background-image: url('assets/images/home/weapons-card-bg.jpg');"></div>
+                        <div class="guide-card-content">
+                            <div class="guide-card-title">武器</div>
+                            <p class="guide-card-subtitle">探索不同武器類型、特性與強化路線</p>
+                        </div>
+                    </a>
+
+                    <!-- 聲骸圖鑑卡片 -->
+                    <a href="pages/echoes/index.html" class="guide-card">
+                        <div class="guide-card-bg" style="background-image: url('assets/images/home/echoes-card-bg.jpg');"></div>
+                        <div class="guide-card-content">
+                            <div class="guide-card-title">聲骸</div>
+                            <p class="guide-card-subtitle">了解聲骸能力、搭配建議與掉落位置</p>
+                        </div>
+                    </a>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- 引入 JavaScript 檔案 -->
+    <script src="assets/js/home.js"></script>
+</body>
+</html>
