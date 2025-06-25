@@ -120,6 +120,12 @@ class CharactersList {
                     const dateB = new Date(b.releaseDate || '2024-01-01');
                     return dateB - dateA;
                     
+                case 'release-asc':
+                    // 按出場時間升序（最舊的在前）
+                    const dateA2 = new Date(a.releaseDate || '2024-01-01');
+                    const dateB2 = new Date(b.releaseDate || '2024-01-01');
+                    return dateA2 - dateB2;
+                    
                 case 'name':
                 default:
                     return a.name.localeCompare(b.name, 'zh-TW');
