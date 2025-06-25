@@ -28,55 +28,18 @@ class CharactersList {
             this.filteredCharacters = [...this.characters];
         } catch (error) {
             console.error('載入角色資料失敗:', error);
-            // 使用備用資料
-            this.characters = this.getMockData();
-            this.filteredCharacters = [...this.characters];
-        }
-    }
-    
-    getMockData() {
-        return [
-            {
-                id: 'Jinhsi',
-                name: '今汐',
-                element: '衍射',
-                affiliation: '煌瓏',
-                weapon: '長刃',
-                rarity: 5,
-                image: 'Jinhsi-card.png',
-                releaseDate: '2024-06-01'
-            },
-            {
-                id: 'Changli',
-                name: '長離',
-                element: '熱熔',
-                affiliation: '煌瓏',
-                weapon: '迅刀',
-                rarity: 5,
-                image: 'Changli-card.png',
-                releaseDate: '2024-07-01'
-            },
-            {
-                id: 'Roccia',
-                name: '洛可可',
-                element: '湮滅',
-                affiliation: '黎那汐塔',
-                weapon: '音感儀',
-                rarity: 5,
-                image: 'Roccia-card.png',
-                releaseDate: '2024-12-01'
-            },
-            {
-                id: 'Cantarella',
-                name: '坎特蕾拉',
-                element: '湮滅',
-                affiliation: '黎那汐塔',
-                weapon: '音感儀',
-                rarity: 4,
-                image: 'Cantarella-card.png',
-                releaseDate: '2024-11-01'
+            // 顯示錯誤訊息
+            const grid = document.getElementById('charactersGrid');
+            if (grid) {
+                grid.innerHTML = `
+                    <div class="no-results">
+                        <div class="no-results-icon">❌</div>
+                        <h3>載入角色資料失敗</h3>
+                        <p>請檢查網路連線或重新整理頁面</p>
+                    </div>
+                `;
             }
-        ];
+        }
     }
     
     setupEventListeners() {
