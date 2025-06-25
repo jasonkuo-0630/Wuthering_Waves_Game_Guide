@@ -160,6 +160,10 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    background-image: url('../../assets/images/icons/card-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .character-image img {
@@ -191,8 +195,8 @@
 }
 
 .affiliation-icon img {
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
 }
 
@@ -213,8 +217,8 @@
 }
 
 .element-icon img {
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
 }
 
