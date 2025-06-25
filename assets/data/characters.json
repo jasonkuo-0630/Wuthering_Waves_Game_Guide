@@ -1,5 +1,16 @@
 [  
     {
+        "id": "Cartethyia",
+        "name": "卡提希婭",
+        "element": "氣動",
+        "affiliation": "黎那汐塔",
+        "weapon": "迅刃",
+        "rarity": 5,
+        "image": "Cartethyia-card.png",
+        "releaseDate": "2025-06-12",
+        "description": ""
+    },
+    {
         "id": "Ciaccona",
         "name": "夏空",
         "element": "氣動",
@@ -249,6 +260,17 @@
         "weapon": "佩槍",
         "rarity": 4,
         "image": "Aalto-card.png",
+        "releaseDate": "2024-05-23",
+        "description": ""
+    },
+    {
+        "id": "Yuanwu",
+        "name": "淵武",
+        "element": "導電",
+        "affiliation": "煌瓏",
+        "weapon": "臂鎧",
+        "rarity": 4,
+        "image": "Yuanwu-card.png",
         "releaseDate": "2024-05-23",
         "description": ""
     },
