@@ -200,7 +200,8 @@ class CharactersList {
         const iconMap = {
             '煌瓏': 'huanglong.png',
             '黎那汐塔': 'rinascita.png',
-            '黑海岸': 'black-shores.png'
+            '黑海岸': 'black-shores.png',
+            '新聯邦': 'new_federation.png'
         };
         return iconMap[affiliation] || 'unknown.png';
     }
