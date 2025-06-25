@@ -1,0 +1,376 @@
+/* 角色頁面專用樣式 */
+.characters-page {
+    background-color: #f8fafb;
+    min-height: 100vh;
+}
+
+.characters-content {
+    padding-top: 80px; /* 給 header 留空間 */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* 頁面標題區 */
+.page-header {
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #667eea;
+    opacity: 0.8;
+}
+
+/* 篩選控制區 */
+.filter-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a5568;
+}
+
+.filter-select {
+    padding: 0.5rem 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background: white;
+    color: #2d3748;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.filter-select:hover {
+    border-color: #667eea;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.search-group {
+    flex: 1;
+    max-width: 300px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.results-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+    color: #667eea;
+}
+
+.reset-btn {
+    padding: 0.5rem 1rem;
+    background: #718096;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.reset-btn:hover {
+    background: #4a5568;
+}
+
+/* 角色卡片區域 */
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+/* 角色卡片樣式 */
+.character-card {
+    position: relative;
+    aspect-ratio: 366/731; /* 根據你的圖片比例 */
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.character-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* 角色圖片 */
+.character-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.character-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.3s ease;
+}
+
+.character-card:hover .character-image img {
+    transform: scale(1.05);
+}
+
+/* 左上角：勢力 icon - 稍微縮小 */
+.affiliation-icon {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    /* 移除 transition 讓它不會動 */
+}
+
+.affiliation-icon img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+/* 右上角：屬性 icon - 稍微縮小 */
+.element-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    /* 移除 transition 讓它不會動 */
+}
+
+.element-icon img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.character-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    padding: 0.75rem;
+    text-align: center;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+/* 四星漸層 - 縮小範圍 */
+.character-card[data-rarity="4"] .character-info {
+    background: linear-gradient(to top, 
+        rgba(139, 69, 255, 0.3) 0%,
+        rgba(139, 69, 255, 0.15) 30%,
+        rgba(0, 0, 0, 0.2) 100%);
+}
+
+/* 五星漸層 - 縮小範圍 */
+.character-card[data-rarity="5"] .character-info {
+    background: linear-gradient(to top, 
+        rgba(255, 215, 0, 0.3) 0%,
+        rgba(255, 215, 0, 0.15) 30%,
+        rgba(0, 0, 0, 0.2) 100%);
+}
+
+.character-card[data-rarity="4"]:hover .character-info {
+    background: linear-gradient(to top, 
+        rgba(139, 69, 255, 0.4) 0%,
+        rgba(139, 69, 255, 0.2) 30%,
+        rgba(0, 0, 0, 0.3) 100%);
+}
+
+.character-card[data-rarity="5"]:hover .character-info {
+    background: linear-gradient(to top, 
+        rgba(255, 215, 0, 0.4) 0%,
+        rgba(255, 215, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0.3) 100%);
+}
+
+/* 角色名稱 */
+.character-name {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* 星級區域 - 改用你的 icon */
+.character-rarity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rarity-icon {
+    height: 24px; /* 稍微縮小稀有度 icon */
+    width: auto;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.5));
+}
+
+/* 載入狀態 */
+.loading {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: #667eea;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e2e8f0;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 無結果狀態 */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: #718096;
+}
+
+.no-results-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .filter-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .search-group {
+        max-width: none;
+    }
+    
+    .results-info {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: stretch;
+    }
+    
+    .results-controls {
+        justify-content: space-between;
+    }
+    
+    .characters-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+    
+    .affiliation-icon,
+    .element-icon {
+        width: 32px;
+        height: 32px;
+        top: 6px;
+    }
+    
+    .affiliation-icon {
+        left: 6px;
+    }
+    
+    .element-icon {
+        right: 6px;
+    }
+    
+    .affiliation-icon img,
+    .element-icon img {
+        width: 22px;
+        height: 22px;
+    }
+    
+    .rarity-icon {
+        height: 20px; /* 手機版稍微小一點 */
+    }
+}
